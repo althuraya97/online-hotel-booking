@@ -73,7 +73,7 @@ class AdminSlideController extends Controller
     public function delete($id)
     {
         $single_data = Slide::where('id',$id)->first();
-        unlink(public_path('uploads/'.$single_data->photo));
+        // unlink(public_path('uploads/'.$single_data->photo));
         $single_data->delete();
 
         return redirect()->back()->with('success', 'Slide is deleted successfully.');

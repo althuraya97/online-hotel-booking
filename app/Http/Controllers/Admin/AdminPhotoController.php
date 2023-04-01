@@ -52,7 +52,7 @@ class AdminPhotoController extends Controller
             $request->validate([
                 'photo' => 'image|mimes:jpg,jpeg,png,gif'
             ]);
-            unlink(public_path('uploads/'.$obj->photo));
+            // unlink(public_path('uploads/'.$obj->photo));
             $ext = $request->file('photo')->extension();
             $final_name = time().'.'.$ext;
             $request->file('photo')->move(public_path('uploads/'),$final_name);
@@ -68,7 +68,7 @@ class AdminPhotoController extends Controller
     public function delete($id)
     {
         $single_data = Photo::where('id',$id)->first();
-        unlink(public_path('uploads/'.$single_data->photo));
+        // unlink(public_path('uploads/'.$single_data->photo));
         $single_data->delete();
 
         return redirect()->back()->with('success', 'Photo is deleted successfully.');

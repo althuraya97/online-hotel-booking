@@ -218,7 +218,7 @@
 </div>
 
 @php
-$client = 'ARw2VtkTvo3aT7DILgPWeSUPjMK_AS5RlMKkUmB78O8rFCJcfX6jFSmTDpgdV3bOFLG2WE-s11AcCGTD';
+$client = 'AUAjzdbxOrH6a0NPyHNElygrRLENZ_Gk0QNvCyJXhmUBFdzoxQAMPb--eB2JoBs9oTd0su_1BAbE-V4Y';
 @endphp
 <script>
 	paypal.Button.render({
